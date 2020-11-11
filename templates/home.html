@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+</head>
+<body>
+<div class="center">
+    <h1>Choose a grammar</h1>
+    <div class="item"><h5>Grammar 1</h5><iframe width="200" src="{{url_for('static',filename='grammar.txt')}}"></iframe></div>
+    <div class="item"><h5>Grammar 2</h5><iframe width="200" src="{{url_for('static',filename='grammar1.txt')}}"></iframe></div>
+    <div class="item"><h5>Grammar 3</h5><iframe width="200" src="{{url_for('static',filename='grammar2.txt')}}"></iframe></div>
+    <div class="item"><h5>Grammar 4</h5><iframe width="200" src="{{url_for('static',filename='grammar3.txt')}}"></iframe></div>
+    <div class="item"><h5>Grammar 5</h5><iframe width="200" src="{{url_for('static',filename='grammar5.txt')}}"></iframe></div>
+    <form method="POST" action="/">
+        <select class="dropbtn" name="grammar" id="grammars">
+        <option class="content" value="grammar">Grammar 1</option>
+            <option value="grammar1">Grammar 2</option>
+            <option value="grammar2">Grammar 3</iframe></option>
+            <option value="grammar3">Grammar 4</option>
+            <option value="grammar5">Grammar 5</option>
+        </select>
+            <br>
+        <input class="center" type="submit" value="next">
+    </form>
+</div>
+</body>
+</html>

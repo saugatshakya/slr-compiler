@@ -1,0 +1,11 @@
+.center {
+  margin: auto;
+  width: 80%;
+  border: 3px solid blue;
+  padding: 10px;
+}
+.item {
+  padding: 10px;
+  display: inline-block;
+  vertical-align: middle
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>You Choose</h1>
+<ol>
+{%for index, rule in s.rule_dict.items()%}
+<li>{{rule}}</li>
+    {%endfor%}
+</ol>
+<h1>Agumented Rules</h1>
+<ol>
+{%for item in s.new_grammar%}
+    <li>{{item.replace(".","")}}</li>
+    {%endfor%}
+</ol>
+<h1>{{s.terminals}}</h1>
+<h1>{{s.non_terminals}}</h1>
+<h1>States</h1>
+<ol>
+    {%for index,itemsets in s.Items.items()%}
+    <li>I[{{index}}]={{itemsets}}</li>
+    {%endfor%}
+</ol>
+<form method="post" action="/result">
+    <input type="text" id="string" name="string" value="string">
+    <input class="center" type="submit" value="next">
+</form>
+
+
+</body>
+</html>
